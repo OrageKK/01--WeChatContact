@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  微信电话本
+//
+//  Created by 黄坤 on 16/4/26.
+//  Copyright © 2016年 wzpnyg. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import "MBProgressHUD.h"
+#import "Masonry.h"
+#define OA_USERNAME @"OA_USERNAME"
+#define OA_PASSWORD @"OA_PASSWORD"
+#define OA_RMBSWITCH @"OA_RMBSWITCH"
+#define OA_ATOSWITCH @"OA_ATOSWITCH"
+#define OARandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+
+
+#ifdef DEBUG
+
+#define HMLog(...) NSLog(__VA_ARGS__) // 替换系统的打印
+
+#else
+
+#define HMLog(...)        // 如果是发布版本,保证不报错
+
+#endif
+
+#endif
+
+
+#endif /* PrefixHeader_pch */
